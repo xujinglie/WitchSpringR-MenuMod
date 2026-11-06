@@ -1,0 +1,24 @@
+# 构建产物
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+
+# IDE / 用户配置
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# 游戏与加载器（绝不能提交）
+BepInEx/
+dotnet/
+WitchSpringR_Data/
+*.exe
+
+# 本地临时
+*.log
+menu_capture.png
