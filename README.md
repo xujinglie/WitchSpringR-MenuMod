@@ -38,20 +38,24 @@ BepInEx 6 的 be 构建之间 API 有变动，请保持 `be.791`，否则插件�
 
 ## 安装
 
-### 方式一：完整包（游戏没有 BepInEx）
+### 前置：装 BepInEx 6（IL2CPP）
 
-下载 Releases 里的 `WSMenuMod-v1.2.0-full-install.zip`，解压到游戏根目录（和 `WitchSpringR.exe` 同级），
-里面已经包含 BepInEx + Doorstop + interop + .NET 6 运行时 + 本插件。
+游戏本体不自带加载器，先去 BepInEx 的 bleeding-edge 构建页下载 **6.0.0-be.791** 的
+`BepInEx-Unity.IL2CPP-win-x64` 包（一定要 IL2CPP 版、x64），解压到游戏根目录，
+和 `WitchSpringR.exe` 同级。这个包自带 Unity Doorstop 与 `dotnet\` 运行时。
 
-首次启动 BepInEx 会校验/生成 interop，可能需要几分钟，期间黑屏属正常，别强退。
+首次启动游戏时 BepInEx 会生成 `BepInEx\interop`，可能需要几分钟，期间黑屏属正常，别强退。
 
-### 方式二：已有 BepInEx
+### 安装本插件
 
-把 `WSMenuMod.dll` 和 `WSMenuMod.deps.json` 放进：
+把 Releases 里的 `WSMenuMod-v1.2.0-plugin.zip` 解压到游戏根目录，或手动放这两个文件：
 
 ```
-<游戏根目录>\BepInEx\plugins\WSMenuMod\
+<游戏根目录>\BepInEx\plugins\WSMenuMod\WSMenuMod.dll
+<游戏根目录>\BepInEx\plugins\WSMenuMod\WSMenuMod.deps.json
 ```
+
+`WSMenuMod.deps.json` 必须和 dll 在同一目录，否则插件不加载。
 
 ## 使用
 
