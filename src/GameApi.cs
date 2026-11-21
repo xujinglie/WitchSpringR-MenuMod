@@ -1119,6 +1119,8 @@ namespace WSMenuMod
             return n;
         }
 
+        private static float ResistanceToDamageMultiplier(float resistance) => 1f - resistance;
+
         private static bool ApplyToInstance(EnemyBasic eb, EnemyStatRow t)
         {
             EnemyBasic.BaseStat st = null;
@@ -1137,8 +1139,8 @@ namespace WSMenuMod
                 st.def = t.Def;
                 st.agt = t.Agt;
                 st.bodySize = t.BodySize;
-                st.defRate_physical = t.DefRatePhysical;
-                st.defRate_magic = t.DefRateMagic;
+                st.defRate_physical = ResistanceToDamageMultiplier(t.DefRatePhysical);
+                st.defRate_magic = ResistanceToDamageMultiplier(t.DefRateMagic);
                 st.bodyType = (BodyType)t.BodyType;
                 st.skillType = (SkillType)t.SkillType;
 
@@ -1190,8 +1192,8 @@ namespace WSMenuMod
                     if (st == null || st.Pointer == IntPtr.Zero) continue;
                     if (st.maxHP == t.MaxHp && st.power == t.Str && st.sp == t.Sp && st.def == t.Def
                         && st.agt == t.Agt && st.bodySize == t.BodySize
-                        && Math.Abs(st.defRate_physical - t.DefRatePhysical) < 0.0001f
-                        && Math.Abs(st.defRate_magic - t.DefRateMagic) < 0.0001f
+                        && Math.Abs(st.defRate_physical - ResistanceToDamageMultiplier(t.DefRatePhysical)) < 0.0001f
+                        && Math.Abs(st.defRate_magic - ResistanceToDamageMultiplier(t.DefRateMagic)) < 0.0001f
                         && (int)st.bodyType == t.BodyType && (int)st.skillType == t.SkillType) continue;
                     if (ApplyToInstance(eb, t)) n++;
                 }
