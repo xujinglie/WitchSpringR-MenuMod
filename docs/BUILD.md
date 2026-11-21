@@ -55,7 +55,7 @@ dotnet build src\MenuMod.csproj -c Release -p:GameDir="D:\steam\steamapps\common
 1. 启动游戏，看 `<游戏根目录>\BepInEx\LogOutput.log` 里有没有：
 
    ```
-   [Info   :WitchSpring R Menu Mod] WitchSpring R Menu Mod v1.2.0 正在加载...
+   [Info   :WitchSpring R Menu Mod] WitchSpring R Menu Mod v1.2.1 正在加载...
    [Info   :WitchSpring R Menu Mod] 菜单已注册，按 F8 打开/关闭。
    ```
 

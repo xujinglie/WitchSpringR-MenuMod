@@ -1,6 +1,6 @@
 # WitchSpring R 菜单 Mod（WSMenuMod）
 
-[![release](https://img.shields.io/badge/release-v1.2.0-blue)]()
+[![release](https://img.shields.io/github/v/release/xujinglie/WitchSpringR-MenuMod)](https://github.com/xujinglie/WitchSpringR-MenuMod/releases/latest)
 [![platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey)]()
 [![BepInEx](https://img.shields.io/badge/BepInEx-6.0.0--be.791-orange)]()
 
@@ -48,7 +48,7 @@ BepInEx 6 的 be 构建之间 API 有变动，请保持 `be.791`，否则插件�
 
 ### 安装本插件
 
-把 Releases 里的 `WSMenuMod-v1.2.0-plugin.zip` 解压到游戏根目录，或手动放这两个文件：
+把 [最新 Release](https://github.com/xujinglie/WitchSpringR-MenuMod/releases/latest) 里的 `WSMenuMod-v1.2.1-plugin.zip` 解压到游戏根目录，或手动放这两个文件：
 
 ```
 <游戏根目录>\BepInEx\plugins\WSMenuMod\WSMenuMod.dll

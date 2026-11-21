@@ -22,6 +22,6 @@ namespace WSMenuMod
     {
         public const string Guid = "witchspringr.modmenu";
         public const string Name = "WitchSpring R Menu Mod";
-        public const string Version = "1.2.0";
+        public const string Version = "1.2.1";
     }
 }
